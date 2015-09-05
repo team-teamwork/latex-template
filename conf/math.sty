@@ -1,0 +1,28 @@
+%___________________________________________________________
+%
+% Math
+%
+% Math related packages and definitions
+%
+%___________________________________________________________
+
+
+\RequirePackage{amssymb}
+\RequirePackage{amsmath}
+
+% For defining math related environments
+\RequirePackage{amsthm}
+
+% These following few come in handy when
+% one wishes to use theorems, definitions et al.
+% without numbering them.
+\theoremstyle{definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem*{remark*}{Remark}
+\newtheorem*{example*}{Example}
+
+% Emulates the notation for adjacency in graphs from
+% The Art of Computer Programming Volume 4 (Chapter about Graph Theory)
+\RequirePackage{centernot}% http://ctan.org/pkg/centernot
+\newcommand{\adj}[1][1em]{\mathrel{\rule[.5ex]{#1}{.4pt}}}
+\newcommand{\notadj}[1][1em]{\mathrel{\centernot{\adj[#1]}}}

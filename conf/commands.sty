@@ -1,0 +1,29 @@
+\ProvidesPackage{unicorn-graphics-commands}
+
+% Lets you define your own commands
+\RequirePackage{letltxmacro}
+
+% Example: replaces the command \marginnote with \mn
+%          cutting down line length remarkably.
+\LetLtxMacro\mn\marginnote
+
+% If \Verb|...| doesn't work on your machine the following
+% will make writing inline verbatim text less of a hassle.
+\LetLtxMacro\ttt\texttt
+
+% Instead of typing \mathbb{N} type \NN.
+% Note: must be enclosed in mathmode delimiters,
+% viz. $<optional math> \NN <optional math$.
+\newcommand*\NN{\mathbb{N}}
+
+% For underlining.
+\RequirePackage{xcolor}
+\RequirePackage{soul}
+
+% Background colour for code snippets
+\definecolor{mintedbackground}{rgb}{0.95,0.95,0.95}
+\definecolor{inlinecode}{rgb}{0.85,0.85,0.85}
+
+% Enclose your code snippets with \hlc{code} to
+% monospace the text and highlight it
+\newcommand{\hlc}[2][inlinecode]{ { \sethlcolor{#1} \ttt{\hl{#2}}} }
