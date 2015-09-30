@@ -51,17 +51,24 @@ Supervisor(s): \Supervisors}
 
 \pagestyle{fancy}
 \headheight 35pt
-\rhead{\Authors}
-\lhead{\small \Title}
-\cfoot{\thepage}
+
+% RO: To the right on odd numbered pages
+% LO: To the left on odd numbered pages
+% RE: To the right on even numbered pages
+% LE: To the right on even numbered pages
+\fancyhead[RO, LE]{\small \Title \thepage(\pageref{LastPage})}
+\fancyhead[RE, LO]{\Authors}
+\cfoot{} % Clear foot
 
 \section{Introduction} %TODO update section
 
-
-
-\subsection{Resources} %TODO update section
+\section{Access and user manual}
 
 Download code at \url{https://www.github.com}
+
+\subsection{Compilation}
+
+\subsection{Usage}
 
 \section{System description} %TODO update section
 
